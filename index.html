@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Happy Birthday Lacruz! Celebrating on October 17th 🎂" />
+  <title>🎂 Happy Birthday Lacruz!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== INTRO / SPLASH SCREEN ===== -->
+  <div class="intro-screen" id="intro-screen">
+    <div class="intro-content">
+
+      <!-- Floating particles -->
+      <div class="intro-particles" id="intro-particles" aria-hidden="true"></div>
+
+      <!-- Envelope -->
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">
+          <span class="letter-emoji">🎂</span>
+        </div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+      </div>
+
+      <h2 class="intro-title">You've Got a Surprise!</h2>
+      <p class="intro-subtitle">Click anywhere to open</p>
+
+      <!-- Pulsing ring -->
+      <div class="pulse-ring" aria-hidden="true"></div>
+      <div class="pulse-ring pulse-ring-2" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="page-wrapper hidden" id="page-wrapper">
+
+    <!-- Main Card / Landing Page -->
+    <div class="landing-card" id="landing-card">
+
+      <!-- Top browser bar -->
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="browser-right-actions">
+          <button class="sfx-toggle-btn" id="sfx-toggle-btn" title="Toggle 8-bit Retro Sounds">
+            <span class="sfx-icon">🔊</span> <span class="sfx-text">SFX ON</span>
+          </button>
+          <nav class="nav-links" id="nav-links">
+            <a href="#wish-card" class="nav-link" id="nav-wish">💌 Wish</a>
+            <a href="#wish-card-chornai" class="nav-link" id="nav-chornai">🌸 Chornai</a>
+            <a href="#" class="nav-link" id="nav-surprise">🎁 Gift</a>
+            <a href="#" class="nav-link" id="nav-cake">🎂 Cake</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-area">
+
+        <!-- Left Column -->
+        <div class="col-left">
+
+          <!-- Lacruz Birthday Portrait Frame -->
+          <div class="lacruz-photo-wrap" id="lacruz-photo-wrap" title="Lacruz • The Birthday Legend!">
+            <div class="photo-crown" aria-hidden="true">👑</div>
+            <div class="photo-circle">
+              <img src="lacruz.jpg" alt="Birthday Guy Lacruz" class="lacruz-photo-img" />
+              <div class="photo-border-ring"></div>
+            </div>
+            <span class="photo-tag">BIRTHDAY BOY ✨</span>
+          </div>
+
+          <!-- Pixel Heart -->
+          <div class="pixel-heart pixel-heart-1" aria-hidden="true">
+            <svg viewBox="0 0 16 14" width="36" height="32">
+              <rect x="2" y="0" width="4" height="2" fill="#5b9bd5" />
+              <rect x="10" y="0" width="4" height="2" fill="#5b9bd5" />
+              <rect x="0" y="2" width="8" height="2" fill="#5b9bd5" />
+              <rect x="8" y="2" width="8" height="2" fill="#5b9bd5" />
+              <rect x="0" y="4" width="16" height="2" fill="#5b9bd5" />
+              <rect x="0" y="6" width="16" height="2" fill="#5b9bd5" />
+              <rect x="2" y="8" width="12" height="2" fill="#5b9bd5" />
+              <rect x="4" y="10" width="8" height="2" fill="#5b9bd5" />
+              <rect x="6" y="12" width="4" height="2" fill="#5b9bd5" />
+            </svg>
+          </div>
+
+          <!-- Balloons -->
+          <div class="balloons-group" aria-hidden="true">
+            <div class="balloon balloon-1">
+              <div class="balloon-body"></div>
+              <div class="balloon-string"></div>
+            </div>
+            <div class="balloon balloon-2">
+              <div class="balloon-body"></div>
+              <div class="balloon-string"></div>
+            </div>
+            <div class="balloon balloon-3">
+              <div class="balloon-body"></div>
+              <div class="balloon-string"></div>
+            </div>
+          </div>
+
+          <!-- Gift Box (Interactive) -->
+          <div class="gift-circle gift-interactive" id="gift-circle" role="button" tabindex="0"
+            title="Click to open your gift!">
+            <div class="gift-box" id="gift-box">
+              <div class="gift-lid" id="gift-lid"></div>
+              <div class="gift-base">
+                <div class="gift-ribbon-v"></div>
+              </div>
+              <div class="gift-ribbon-h"></div>
+            </div>
+            <span class="gift-badge">OPEN ME! 🎁</span>
+          </div>
+
+        </div>
+
+        <!-- Center Column (Text) -->
+        <div class="col-center">
+          <p class="subtitle" id="subtitle">OCTOBER 17</p>
+          <h1 class="main-heading" id="main-heading">
+            <span class="heading-line">HAPPY BIRTHDAY</span>
+            <span class="heading-line">LACRUZ!</span>
+          </h1>
+          <p class="description" id="description">
+            Wishing you the most amazing birthday, Lacruz! 🎉
+            May your day be filled with joy, laughter, and everything
+            that makes you happy. You deserve the best!
+          </p>
+          <div class="cta-row">
+            <a href="#" class="cta-link" id="cta-link">
+              <span class="cta-text">Celebrate</span>
+              <span class="cta-arrow">🎉</span>
+            </a>
+            <a href="#wish-card" class="cta-wish-link" id="cta-wish-link">
+              <span>My Wish 💌</span>
+            </a>
+            <a href="#wish-card-chornai" class="cta-chornai-link" id="cta-chornai-link">
+              <span>From Chornai 🌸</span>
+            </a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="social-row" id="social-row">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M15 8h-2a3 3 0 0 0-3 3v9" />
+                <line x1="9" y1="14" x2="15" y2="14" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 16 3c-2.5 0-4.5 2-4.5 4.5v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-right">
+
+          <!-- Cursor icon -->
+          <div class="cursor-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <path d="M5 3l14 8-6 2-4 6z" fill="#1a2a44" stroke="#1a2a44" stroke-width="1.5" stroke-linejoin="round" />
+              <path d="M13 13l4 8" stroke="#1a2a44" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <!-- Browser Window with Cake -->
+          <div class="cake-browser" id="cake-browser">
+            <div class="cake-browser-bar">
+              <span class="cb-dot"></span>
+              <span class="cb-dot"></span>
+              <span class="cb-dot"></span>
+              <span class="cb-title">cake.exe</span>
+            </div>
+            <div class="cake-browser-body">
+              <div class="wish-bubble" id="wish-bubble">✨ Wish Made! ✨</div>
+              <!-- Cake SVG -->
+              <svg class="cake-svg" viewBox="0 0 120 110" aria-label="Birthday cake illustration">
+                <!-- Candle -->
+                <rect x="55" y="8" width="6" height="22" rx="2" fill="#5b9bd5" />
+                <g id="candle-flame" class="candle-flame-group" title="Click to blow out!">
+                  <ellipse cx="58" cy="6" rx="5" ry="7" fill="#fbbf24" class="flame-anim" />
+                  <ellipse cx="58" cy="6" rx="3" ry="4" fill="#fef3c7" class="flame-anim-inner" />
+                </g>
+                <g id="smoke-particles" class="smoke-particles" opacity="0"></g>
+
+                <!-- Top layer -->
+                <ellipse cx="60" cy="32" rx="40" ry="8" fill="#a8c8f0" />
+                <rect x="20" y="32" width="80" height="22" rx="2" fill="#a8c8f0" />
+                <ellipse cx="60" cy="54" rx="40" ry="8" fill="#8db8e8" />
+
+                <!-- Frosting drips -->
+                <circle cx="30" cy="54" r="4" fill="#dbeafe" />
+                <circle cx="45" cy="56" r="5" fill="#dbeafe" />
+                <circle cx="60" cy="55" r="4" fill="#dbeafe" />
+                <circle cx="75" cy="56" r="5" fill="#dbeafe" />
+                <circle cx="90" cy="54" r="4" fill="#dbeafe" />
+
+                <!-- Bottom layer -->
+                <rect x="15" y="54" width="90" height="28" rx="2" fill="#7aa8d9" />
+                <ellipse cx="60" cy="82" rx="45" ry="8" fill="#6a9bcc" />
+
+                <!-- Decorative dots -->
+                <circle cx="30" cy="68" r="3" fill="#dbeafe" opacity="0.8" />
+                <circle cx="45" cy="68" r="3" fill="#dbeafe" opacity="0.8" />
+                <circle cx="60" cy="68" r="3" fill="#dbeafe" opacity="0.8" />
+                <circle cx="75" cy="68" r="3" fill="#dbeafe" opacity="0.8" />
+                <circle cx="90" cy="68" r="3" fill="#dbeafe" opacity="0.8" />
+
+                <!-- Plate -->
+                <ellipse cx="60" cy="90" rx="52" ry="6" fill="#e8f0fe" stroke="#1a2a44" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div class="cake-browser-footer">
+              <button class="ok-btn candle-btn" id="ok-btn" title="Click to blow candle or relight!">🎂 Blow
+                Candle</button>
+            </div>
+          </div>
+
+          <!-- Eye decoration -->
+          <div class="eye-decoration" id="eye-decoration" aria-hidden="true">
+            <svg viewBox="0 0 80 40" width="80" height="40">
+              <path d="M4 20 Q20 0 40 20 Q60 0 76 20" fill="none" stroke="#1a2a44" stroke-width="2" />
+              <path d="M4 20 Q20 40 40 20 Q60 40 76 20" fill="none" stroke="#1a2a44" stroke-width="2" />
+              <circle cx="40" cy="20" r="8" fill="#1a2a44" />
+              <circle cx="40" cy="20" r="4" fill="#5b9bd5" />
+              <circle cx="42" cy="18" r="2" fill="#fff" />
+              <!-- Eyelashes -->
+              <line x1="20" y1="10" x2="18" y2="4" stroke="#1a2a44" stroke-width="1.5" />
+              <line x1="30" y1="6" x2="29" y2="0" stroke="#1a2a44" stroke-width="1.5" />
+              <line x1="50" y1="6" x2="51" y2="0" stroke="#1a2a44" stroke-width="1.5" />
+              <line x1="60" y1="10" x2="62" y2="4" stroke="#1a2a44" stroke-width="1.5" />
+            </svg>
+          </div>
+
+          <!-- Pixel Heart 2 -->
+          <div class="pixel-heart pixel-heart-2" aria-hidden="true">
+            <svg viewBox="0 0 16 14" width="28" height="24">
+              <rect x="2" y="0" width="4" height="2" fill="#fbbf24" />
+              <rect x="10" y="0" width="4" height="2" fill="#fbbf24" />
+              <rect x="0" y="2" width="8" height="2" fill="#fbbf24" />
+              <rect x="8" y="2" width="8" height="2" fill="#fbbf24" />
+              <rect x="0" y="4" width="16" height="2" fill="#fbbf24" />
+              <rect x="0" y="6" width="16" height="2" fill="#fbbf24" />
+              <rect x="2" y="8" width="12" height="2" fill="#fbbf24" />
+              <rect x="4" y="10" width="8" height="2" fill="#fbbf24" />
+              <rect x="6" y="12" width="4" height="2" fill="#fbbf24" />
+            </svg>
+          </div>
+
+          <!-- Wavy stripe decoration (bottom right) -->
+          <div class="wavy-stripe-block" aria-hidden="true">
+            <svg viewBox="0 0 60 120" width="50" height="100">
+              <defs>
+                <clipPath id="stripeBlockClip">
+                  <rect x="0" y="0" width="60" height="120" rx="8" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#stripeBlockClip)">
+                <rect width="60" height="120" fill="#e8f0fe" />
+                <rect x="-5" y="0" width="14" height="120" fill="#4a90d9" rx="3" transform="rotate(-5 30 60)" />
+                <rect x="9" y="0" width="14" height="120" fill="#e8f0fe" rx="3" transform="rotate(-5 30 60)" />
+                <rect x="23" y="0" width="14" height="120" fill="#4a90d9" rx="3" transform="rotate(-5 30 60)" />
+                <rect x="37" y="0" width="14" height="120" fill="#e8f0fe" rx="3" transform="rotate(-5 30 60)" />
+                <rect x="51" y="0" width="14" height="120" fill="#4a90d9" rx="3" transform="rotate(-5 30 60)" />
+              </g>
+              <rect x="0" y="0" width="60" height="120" rx="8" fill="none" stroke="#1a2a44" stroke-width="2" />
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom accent line -->
+      <div class="bottom-line"></div>
+
+    </div>
+
+    <!-- ===== PERSONAL WISH CARD ===== -->
+    <div class="landing-card wish-card" id="wish-card">
+      <!-- Browser window bar -->
+      <div class="browser-bar wish-card-bar">
+        <div class="browser-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="wish-card-title-bar">
+          <span class="wish-window-title">💌 special_wish_for_lacruz.txt</span>
+        </div>
+        <div class="wish-card-badge">A WISH FROM ME ✨</div>
+      </div>
+
+      <div class="wish-card-content">
+        <!-- Left: Photo Memories (Then & Now) -->
+        <div class="wish-photos-col">
+          <div class="polaroid-stack">
+            <!-- Polaroid 1: Childhood -->
+            <div class="polaroid-card polaroid-childhood" title="How it started!">
+              <div class="polaroid-tape" aria-hidden="true"></div>
+              <div class="polaroid-img-wrap">
+                <img src="thisoneistead.jpg" alt="Younger Lacruz" class="polaroid-img" />
+              </div>
+              <p class="polaroid-caption">Day One Legend 👶</p>
+            </div>
+
+            <!-- Polaroid 2: Present Day -->
+            <div class="polaroid-card polaroid-now" title="How it's going!">
+              <div class="polaroid-tape" aria-hidden="true"></div>
+              <div class="polaroid-crown-icon" aria-hidden="true">👑</div>
+              <div class="polaroid-img-wrap">
+                <img src="lacruz.jpg" alt="Lacruz Today" class="polaroid-img" />
+              </div>
+              <p class="polaroid-caption">Birthday King 🚀</p>
+            </div>
+          </div>
+          <span class="timeline-tag">THEN ➡️ NOW ★</span>
+        </div>
+
+        <!-- Right: The Heartfelt Letter -->
+        <div class="wish-letter-col">
+          <div class="wish-letter-header">
+            <span class="wish-tag">PERSONAL MESSAGE</span>
+            <h2 class="wish-heading">A Birthday Wish From Me 🎂</h2>
+            <p class="wish-date">October 17 • Written specially for Lacruz</p>
+          </div>
+
+          <div class="wish-letter-body">
+            <p class="wish-greeting">Dear Lacruz,</p>
+            <p class="wish-paragraph">
+              Happy Birthday, brother! 🎉 Another year older, another year wiser, and another year of being an absolute
+              legend.
+              I wanted to build this page to celebrate you and remind you how much you're valued and appreciated.
+            </p>
+            <p class="wish-paragraph">
+              From all the great conversations and laughs to the memories we've shared, having you around makes
+              everything so much better.
+              Looking at where you started to the person you are today — I'm genuinely proud of you.
+            </p>
+            <p class="wish-paragraph">
+              I hope this upcoming year brings you massive success, real peace, unbreakable health, and all the joy you
+              deserve.
+              Keep grinding, keep being yourself, and never lose that incredible spark of yours.
+            </p>
+            <p class="wish-paragraph wish-highlight">
+              Enjoy your special day, turn up the music, and eat plenty of cake! 🚀✨
+            </p>
+
+            <div class="wish-letter-signoff">
+              <div class="signature-block">
+                <span class="sign-label">Always in your corner,</span>
+                <span class="sign-name">With all my best wishes ❤️</span>
+              </div>
+              <div class="wax-seal" title="Official Seal of Friendship">
+                <span class="seal-icon">★</span>
+                <span class="seal-text">VERIFIED FRIEND</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive cheer button -->
+          <div class="wish-actions">
+            <button class="wish-cheer-btn" id="wish-cheer-btn" title="Click to send birthday love!">
+              <span class="cheer-heart">💖</span>
+              <span class="cheer-btn-text">Send Birthday Love</span>
+            </button>
+            <span class="cheer-counter" id="cheer-counter">Loved 0 times</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom accent stripe -->
+      <div class="bottom-line"></div>
+    </div>
+
+    <!-- ===== CHORNAI'S WISH CARD ===== -->
+    <div class="landing-card wish-card wish-card-chornai" id="wish-card-chornai">
+      <!-- Browser window bar -->
+      <div class="browser-bar wish-card-bar chornai-bar">
+        <div class="browser-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="wish-card-title-bar">
+          <span class="wish-window-title">🌸 wish_from_chornai.txt</span>
+        </div>
+        <div class="wish-card-badge chornai-badge">FROM CHORNAI 💖</div>
+      </div>
+
+      <div class="wish-card-content">
+        <!-- Left: Photo Memories -->
+        <div class="wish-photos-col">
+          <div class="polaroid-stack">
+            <!-- Polaroid 1: Childhood photo -->
+            <div class="polaroid-card polaroid-childhood" title="Cutest memory!">
+              <div class="polaroid-tape chornai-tape" aria-hidden="true"></div>
+              <div class="polaroid-img-wrap">
+                <img src="thisoneistead.jpg" alt="Younger Lacruz" class="polaroid-img" />
+              </div>
+              <p class="polaroid-caption">Cutest Ever 🐣</p>
+            </div>
+
+            <!-- Polaroid 2: Present Day -->
+            <div class="polaroid-card polaroid-now" title="The Birthday King!">
+              <div class="polaroid-tape chornai-tape" aria-hidden="true"></div>
+              <div class="polaroid-crown-icon" aria-hidden="true">🌸</div>
+              <div class="polaroid-img-wrap">
+                <img src="lacruz.jpg" alt="Lacruz Today" class="polaroid-img" />
+              </div>
+              <p class="polaroid-caption">Always Shining 🌟</p>
+            </div>
+          </div>
+          <span class="timeline-tag chornai-timeline-tag">CHORNAI'S WISH ★</span>
+        </div>
+
+        <!-- Right: The Heartfelt Letter from Chornai -->
+        <div class="wish-letter-col">
+          <div class="wish-letter-header">
+            <span class="wish-tag chornai-tag">WARMEST WISHES</span>
+            <h2 class="wish-heading">Happy Birthday, Lacruz! 🎂🌸</h2>
+            <p class="wish-date">October 17 • Written with love by Chornai</p>
+          </div>
+
+          <div class="wish-letter-body chornai-letter-body">
+            <p class="wish-greeting">Dearest Lacruz,</p>
+            <p class="wish-paragraph">
+              Wishing you the happiest and most magical birthday today! 🎉 Having you as a friend is such a wonderful
+              gift.
+              You bring so much joy, kindness, and effortless fun to everyone lucky enough to know you.
+            </p>
+            <p class="wish-paragraph">
+              Thank you for all the laughs, the sweet moments, and for always being someone people can count on.
+              You have such a genuine heart, and you deserve nothing but the absolute best in life.
+            </p>
+            <p class="wish-paragraph">
+              I hope this year showers you with endless happiness, huge milestones, good health, and exciting
+              adventures.
+              May every single wish you blow out on that candle come true!
+
+              <br><br>
+              P.S I hope your hair is luscious and beautiful like this year you’re spending being 21
+            </p>
+            <p class="wish-paragraph wish-highlight chornai-highlight">
+              Have the sweetest celebration ever and eat lots of cake today! 🍰✨💖
+            </p>
+
+            <div class="wish-letter-signoff">
+              <div class="signature-block">
+                <span class="sign-label">With endless love & warmest hugs,</span>
+                <span class="sign-name chornai-sign-name">Chornai 🌸💖</span>
+              </div>
+              <div class="wax-seal chornai-seal" title="Chornai's Official Stamp">
+                <span class="seal-icon">🌸</span>
+                <span class="seal-text">CHORNAI'S LOVE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive cheer button -->
+          <div class="wish-actions">
+            <button class="wish-cheer-btn chornai-cheer-btn" id="chornai-cheer-btn" title="Send love from Chornai!">
+              <span class="cheer-heart">🌸</span>
+              <span class="cheer-btn-text">Send Hugs & Love</span>
+            </button>
+            <span class="cheer-counter" id="chornai-cheer-counter">Loved by Chornai 0 times 💖</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom accent stripe -->
+      <div class="bottom-line"></div>
+    </div>
+
+  </div>
+  <!-- ===== MP3 PLAYER ===== -->
+  <div class="music-player" id="music-player">
+    <audio id="audio-el" preload="metadata">
+      <source src="Bleachers - Merry Christmas, Please Don't Call (Official Music Video).mp3" type="audio/mpeg" />
+      <source src="song.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="player-inner">
+      <!-- Disc / Album art -->
+      <div class="player-disc-wrap">
+        <div class="player-disc" id="player-disc">
+          <div class="disc-ring disc-ring-1"></div>
+          <div class="disc-ring disc-ring-2"></div>
+          <div class="disc-center" title="Lacruz">
+            <img src="thisoneistead.jpg" alt="Lacruz" class="disc-avatar-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="player-controls">
+        <div class="player-track-info">
+          <span class="track-title" id="track-title">Merry Christmas, Please Don't Call</span>
+          <span class="track-artist">Bleachers • For Lacruz 🎂</span>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="player-progress-wrap" id="progress-wrap">
+          <div class="player-progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="player-time">
+          <span id="time-current">0:00</span>
+          <span id="time-total">0:00</span>
+        </div>
+
+        <!-- Buttons row -->
+        <div class="player-buttons">
+          <button class="player-btn btn-prev" id="btn-prev" aria-label="Rewind">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M19 20L9 12l10-8v16zM7 4h2v16H7V4z" />
+            </svg>
+          </button>
+          <button class="player-btn btn-play" id="btn-play" aria-label="Play / Pause">
+            <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none">
+              <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
+            </svg>
+          </button>
+          <button class="player-btn btn-next" id="btn-next" aria-label="Forward">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M5 4l10 8-10 8V4zm12 0h2v16h-2V4z" />
+            </svg>
+          </button>
+          <label class="player-btn btn-upload" id="btn-upload"
+            title="Choose/Upload any MP3 or audio file from your device">
+            <input type="file" id="audio-file-input" accept="audio/*" style="display:none;" />
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+          </label>
+          <button class="player-btn btn-vol" id="btn-vol" aria-label="Volume">
+            <svg class="icon-vol-on" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+            </svg>
+            <svg class="icon-vol-off" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
+              style="display:none">
+              <path
+                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SURPRISE GIFT MODAL ===== -->
+  <div class="gift-modal-backdrop" id="gift-modal" style="display:none;" aria-hidden="true">
+    <div class="gift-modal-dialog">
+      <!-- Modal Browser Bar -->
+      <div class="gift-modal-bar">
+        <span class="dot dot-red" id="modal-close-dot"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="gift-modal-title">vip_pass_lacruz.exe</span>
+        <button class="gift-modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="gift-modal-body">
+        <div class="pass-stamp">★ VIP ★</div>
+        <div class="pass-header">
+          <span class="pass-emoji">👑</span>
+          <h2 class="pass-title">OFFICIAL BIRTHDAY PASS</h2>
+          <p class="pass-subtitle">CLASS OF OCTOBER 17</p>
+        </div>
+
+        <div class="pass-id-grid">
+          <div class="pass-photo-box">
+            <img src="thisoneistead.jpg" alt="Lacruz" class="pass-photo-img" />
+            <span class="pass-verified">VERIFIED ★</span>
+          </div>
+          <div class="pass-card">
+            <div class="pass-row">
+              <span class="pass-label">HOLDER:</span>
+              <span class="pass-value">LACRUZ</span>
+            </div>
+            <div class="pass-row">
+              <span class="pass-label">STATUS:</span>
+              <span class="pass-value pass-gold">LEGENDARY ★★★★★</span>
+            </div>
+            <div class="pass-row">
+              <span class="pass-label">UNLOCKED:</span>
+              <span class="pass-value">Unlimited Cake & Vibes</span>
+            </div>
+            <div class="pass-row">
+              <span class="pass-label">VALIDITY:</span>
+              <span class="pass-value">A Whole Year of Good Vibes</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="pass-message">
+          "May this year bring you endless wins, legendary memories, and unshakeable happiness. Happy Birthday!"
+        </p>
+
+        <div class="pass-actions">
+          <button class="pass-btn pass-btn-claim" id="pass-claim-btn">🎉 Claim Good Vibes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
